@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(-5%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@mixin flex($flex-display: flex, $direction: column, $align: center, $justify: center) {
+    display: $flex-display;
+    display: $flex-display;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+    -webkit-align-items: $align;
+    align-items: $align;
+    -webkit-justify-content: $justify;
+    justify-content: $justify;
+}
+
+
+.group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-height: 600px;
+    @include flex(flex, column, center, space-evenly);
+    overflow: hidden;
+    padding: 0px 0px 50px 0px;
+}
+
+.row {
+    height: 100px;
+    width: 200vw;
+    @include flex(flex, row, flex-start, space-around);
+    transform: translate3d(25%, 0, 0);
+    white-space: nowrap;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 60s;
+}
+
+.row span {
+    font-family: 'Montserrat', sans-serif;
+    color: transparent;
+    font-size: 100px;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ff5631;
+}
+
+.row span.full {
+    color: #ff5631;
+    -webkit-text-stroke-width: 0px;
+}
+
+div:nth-child(2n) {
+    animation-direction: reverse;
+}
+
+div:hover {
+    animation-play-state: paused;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .row {
+        height: 150px;
+    }
+
+    .row span {
+        font-size: 130px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+
+    .group {
+        min-height: 300px;
+        margin-top: 20px;
+    }
+
+    .row {
+        height: 50px;
+        animation-duration: 30s;
+    }
+
+    .row span {
+        font-size: 45px;
+    }
+    
+    }
+
+    @media screen and (max-width: 375px) {
+
+        .group {
+            padding: 0px 0px 100px 0px;
+
+        }
+
+        .row {
+            height: 90px;
+            animation-duration: 20s;
+        }
+
+        .row span {
+            font-size: 80px;
+        }
+    }

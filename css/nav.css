@@ -1,0 +1,71 @@
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .navbar {
+    padding: 40px 0px 0px 70px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation li a {
+    color: #ff5631;
+    text-decoration: none;
+    padding: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navigation button {
+    background: none;
+    border: none;
+    outline: none;
+    display: none; 
+}
+
+@media screen and (max-width: 1024px) {
+    
+    nav .navbar {
+    padding: 30px 0px 0px 30px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    nav .navbar {
+    padding: 30px 0px 0px 30px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+    
+    nav .navbar {
+    padding: 15px 0px 0px 10px;
+    }
+    
+    .navigation li a {
+        padding: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+    nav .navbar {
+    padding: 15px 0px 0px 10px;
+    }
+    
+    .navigation li a {
+        padding: 12px;
+    }
+}
+

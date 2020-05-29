@@ -1,0 +1,79 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*cursor: none;*/
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    background-color: #FFE8F9;
+/*    overflow: hidden;*/
+/*    position: relative;*/
+}
+
+#fullpage {
+    min-height: 100vh;
+/*    overflow: hidden;*/
+}
+
+#fullpage > * {
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    padding: 0;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    transition:all 800ms ease;
+}
+
+
+
+#home {
+    background-image: url(../img/line/01.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+#logo {
+    background-image: url(../img/line/02.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+#poster {
+    background-image: url(../img/line/03.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+#layout {
+    background-image: url(../img/line/04.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+#contact {
+    background-image: url(../img/line/05.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+#about {
+    background-image: url(../img/line/06.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+
+
+
+
+
+
